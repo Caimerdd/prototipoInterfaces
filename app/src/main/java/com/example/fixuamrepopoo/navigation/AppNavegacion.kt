@@ -1,4 +1,4 @@
-package com.example.proyecto_fixuam.navigation
+package com.example.fixuamrepopoo.navigation
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -9,11 +9,10 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.runtime.*
-import com.example.fixuamrepopoo.model.Reporte
-import com.example.proyecto_fixuam.screens.*
-import com.example.proyecto_fixuam.ui.theme.ConfiguracionTema
-import com.example.proyecto_fixuam.ui.theme.LocalConfiguracionTema
 
+import com.example.fixuamrepopoo.screens.*
+import com.example.fixuamrepopoo.ui.theme.ConfiguracionTema
+import com.example.fixuamrepopoo.ui.theme.LocalConfiguracionTema
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AppNavigation() {

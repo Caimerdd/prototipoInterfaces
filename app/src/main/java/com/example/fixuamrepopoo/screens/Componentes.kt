@@ -1,4 +1,4 @@
-package com.example.proyecto_fixuam.screens
+package com.example.fixuamrepopoo.screens
 
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -26,13 +26,13 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.proyecto_fixuam.ui.theme.LocalConfiguracionTema
-import com.example.proyecto_fixuam.ui.theme.colorPrincipalApp
-import com.example.proyecto_fixuam.ui.theme.fondoApp
-import com.example.proyecto_fixuam.ui.theme.tarjetaApp
-import com.example.proyecto_fixuam.ui.theme.textoApp
-import com.example.proyecto_fixuam.ui.theme.textoSecundarioApp
 
+import com.example.fixuamrepopoo.ui.theme.LocalConfiguracionTema
+import com.example.fixuamrepopoo.ui.theme.colorPrincipalApp
+import com.example.fixuamrepopoo.ui.theme.fondoApp
+import com.example.fixuamrepopoo.ui.theme.tarjetaApp
+import com.example.fixuamrepopoo.ui.theme.textoApp
+import com.example.fixuamrepopoo.ui.theme.textoSecundarioApp
 @Composable
 fun FondoPrincipal(
     content: @Composable BoxScope.() -> Unit

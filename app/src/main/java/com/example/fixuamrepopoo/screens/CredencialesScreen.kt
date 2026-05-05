@@ -1,4 +1,4 @@
-package com.example.proyecto_fixuam.screens
+package com.example.fixuamrepopoo.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -22,13 +22,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.proyecto_fixuam.ui.theme.ColorPrincipal
-import com.example.proyecto_fixuam.ui.theme.ColorRojo
-import com.example.proyecto_fixuam.ui.theme.LocalConfiguracionTema
-import com.example.proyecto_fixuam.ui.theme.tarjetaApp
-import com.example.proyecto_fixuam.ui.theme.textoApp
-import com.example.proyecto_fixuam.ui.theme.textoSecundarioApp
 
+import com.example.fixuamrepopoo.ui.theme.ColorPrincipal
+import com.example.fixuamrepopoo.ui.theme.ColorRojo
+import com.example.fixuamrepopoo.ui.theme.LocalConfiguracionTema
+import com.example.fixuamrepopoo.ui.theme.tarjetaApp
+import com.example.fixuamrepopoo.ui.theme.textoApp
+import com.example.fixuamrepopoo.ui.theme.textoSecundarioApp
 @Composable
 fun CredencialesScreen(
     rol: String,

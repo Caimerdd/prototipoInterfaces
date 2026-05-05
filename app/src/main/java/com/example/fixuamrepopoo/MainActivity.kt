@@ -1,9 +1,9 @@
-package com.example.proyecto_fixuam
+package com.example.fixuamrepopoo
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.proyecto_fixuam.navigation.AppNavigation
+import com.example.fixuamrepopoo.navigation.AppNavigation
 
 class MainActivity : ComponentActivity() {
 
