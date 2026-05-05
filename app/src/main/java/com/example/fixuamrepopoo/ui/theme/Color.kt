@@ -1,4 +1,4 @@
-package com.example.proyecto_fixuam.ui.theme
+package com.example.fixuamrepopoo.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

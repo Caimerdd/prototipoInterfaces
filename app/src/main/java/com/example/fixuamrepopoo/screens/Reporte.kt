@@ -1,4 +1,4 @@
-package com.example.proyecto_fixuam.model
+package com.example.fixuamrepopoo.screens
 
 import android.graphics.Bitmap
 
