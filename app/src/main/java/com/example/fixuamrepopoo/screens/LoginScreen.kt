@@ -21,7 +21,6 @@ import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 import kotlin.random.Random
-
 import com.example.fixuamrepopoo.ui.theme.LocalConfiguracionTema
 import com.example.fixuamrepopoo.ui.theme.colorPrincipalApp
 import com.example.fixuamrepopoo.ui.theme.tarjetaApp

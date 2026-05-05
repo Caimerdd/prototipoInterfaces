@@ -13,13 +13,13 @@ import androidx.compose.runtime.*
 import com.example.fixuamrepopoo.screens.*
 import com.example.fixuamrepopoo.ui.theme.ConfiguracionTema
 import com.example.fixuamrepopoo.ui.theme.LocalConfiguracionTema
+
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AppNavigation() {
 
     var pantallaActual by remember { mutableStateOf("login") }
     var rolSeleccionado by remember { mutableStateOf("") }
-
     var modoOscuro by remember { mutableStateOf(false) }
 
     val reportes = remember {
@@ -78,7 +78,7 @@ fun AppNavigation() {
                         pantallaActual = when (rolSeleccionado) {
                             "docente" -> "inicio_docente"
                             "colaborador" -> "colaborador"
-                            "admin" -> "colaborador"
+                            "admin" -> "admin_panel"
                             else -> "login"
                         }
                     }
@@ -176,7 +176,7 @@ fun AppNavigation() {
 
                             reportes[index] = reporteActual.copy(
                                 estado = "En proceso",
-                                atendidoPor = "Jaajajja"
+                                atendidoPor = "Soporte UAM"
                             )
                         }
                     },
@@ -189,6 +189,19 @@ fun AppNavigation() {
                             reportes[index] = reporteActual.copy(
                                 estado = "Resuelto"
                             )
+                        }
+                    },
+                    cerrarSesion = {
+                        pantallaActual = "login"
+                    }
+                )
+
+                "admin_panel" -> AdministradorScreen(
+                    reportes = reportes,
+                    eliminarReporte = { id ->
+                        val reporte = reportes.find { it.id == id }
+                        if (reporte != null) {
+                            reportes.remove(reporte)
                         }
                     },
                     cerrarSesion = {
