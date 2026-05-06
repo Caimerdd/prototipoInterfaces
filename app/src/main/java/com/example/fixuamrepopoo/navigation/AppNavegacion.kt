@@ -22,6 +22,8 @@ fun AppNavigation() {
     var rolSeleccionado by remember { mutableStateOf("") }
     var modoOscuro by remember { mutableStateOf(false) }
 
+    var usuarioActual by remember { mutableStateOf("") }
+
     val reportes = remember {
         mutableStateListOf<Reporte>()
     }
@@ -75,6 +77,26 @@ fun AppNavigation() {
                         pantallaActual = "login"
                     },
                     ingresar = {
+                        usuarioActual = when (rolSeleccionado) {
+                            "docente" -> "Juan Pérez"
+                            "colaborador" -> "Carlos López"
+                            "admin" -> "Luis Carlos"
+                            else -> "Usuario"
+                        }
+                        pantallaActual = "dashboard"
+                    }
+                )
+
+                "dashboard" -> DashboardScreen(
+                    rol = rolSeleccionado,
+                    reportes = reportes,
+                    usuarioNombre = usuarioActual,
+                    onCerrarSesion = {
+                        usuarioActual = ""
+                        rolSeleccionado = ""
+                        pantallaActual = "login"
+                    },
+                    onNavigateToInicio = {
                         pantallaActual = when (rolSeleccionado) {
                             "docente" -> "inicio_docente"
                             "colaborador" -> "colaborador"
@@ -131,7 +153,7 @@ fun AppNavigation() {
                 )
 
                 "mis_reportes" -> MisReportesScreen(
-                    reportes = reportes,
+                    reportes = reportes.filter { it.docente == usuarioActual },
                     volver = {
                         pantallaActual = "inicio_docente"
                     },
@@ -162,6 +184,8 @@ fun AppNavigation() {
                         pantallaActual = "inicio_docente"
                     },
                     cerrarSesion = {
+                        usuarioActual = ""
+                        rolSeleccionado = ""
                         pantallaActual = "login"
                     }
                 )
@@ -192,6 +216,8 @@ fun AppNavigation() {
                         }
                     },
                     cerrarSesion = {
+                        usuarioActual = ""
+                        rolSeleccionado = ""
                         pantallaActual = "login"
                     }
                 )
@@ -205,6 +231,8 @@ fun AppNavigation() {
                         }
                     },
                     cerrarSesion = {
+                        usuarioActual = ""
+                        rolSeleccionado = ""
                         pantallaActual = "login"
                     }
                 )
